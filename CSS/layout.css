@@ -1,4 +1,64 @@
 /* header, footer, forms*/
 
+:root {
+    --primary: #2F855A;
+    --primary-dark: #276749;
+    --secondary: #e28e28;
+    --background: #F7FAFC;
+    --card-bg: #FFFFFF;
+    --text-main: #2D3748;
+    --text-muted: #718096;
+    --border: #e2e8f042;
+    --danger: #E53E3E;
+}
+
+[data-theme="dark"] {
+    --primary: #38A169;
+    --primary-dark: #2F855A;
+    --secondary: #F6AD55;
+
+    --background: #1A202C;
+    --card-bg: #2D3748;
+
+    --text-main: #EDF2F7;
+    --text-muted: #A0AEC0;
+
+    --border: #ffffff14;
+}
 
 
+/* =====================
+   FORMULÁRIO
+===================== */
+
+form{
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    max-width: 400px;
+    padding: 2rem;
+    width: 100%;
+}
+
+.Labels{
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.Input-form{
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+.Input-form:focus{
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(47, 133, 90, 0.15);
+}

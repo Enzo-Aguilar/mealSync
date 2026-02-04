@@ -1,30 +1,117 @@
-/*inputs, buttons, divs*/
-
-input {
-    display: block;
-    margin: 0.75rem auto;
-    padding: 0.75rem;
-    width: 13,75rem;
-    border-radius: 7px;
+/*inputs, buttons, divs, navs, li, ul*/
+:root {
+    --primary: #2F855A;
+    --primary-dark: #276749;
+    --secondary: #e28e28;
+    --background: #F7FAFC;
+    --card-bg: #FFFFFF;
+    --text-main: #2D3748;
+    --text-muted: #718096;
+    --border: #e2e8f042;
+    --danger: #E53E3E;
 }
 
-button {
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.625rem;
+[data-theme="dark"] {
+    --primary: #38A169;
+    --primary-dark: #2F855A;
+    --secondary: #F6AD55;
+
+    --background: #1A202C;
+    --card-bg: #2D3748;
+
+    --text-main: #EDF2F7;
+    --text-muted: #A0AEC0;
+
+    --border: rgba(255, 255, 255, 0.08);
 }
 
-div{
-    display: grid;
+
+/* =====================
+   CONTAINER LOGIN
+===================== */
+
+.Container{
     align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+/* =====================
+   BOTÃO
+===================== */
+
+button{
+    background-color: var(--primary);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width:100%;
+}
+
+button:hover{
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 12px var(--secondary);
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.Navbar{
+    align-items: center;
+    background-color: var(--primary);
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.Logo{
+    font-size:1.4rem;
+    font-weight: 700;
+}
+
+.Nav-links{
+    list-style: none;
+}
+
+.Nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.Nav-links li a:hover{
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: var(--primary-dark);
+    padding: 0.25rem 0.5rem;
+    text-decoration: underline;
+}
+
+
+
+/* =====================
+   TEXTO AUXILIAR
+===================== */
+
+form p{
+    color: var(--text-muted);
+    font: 0.9rem;
+    margin-top: 1rem;
     text-align: center;
-    background-color: rgb(43, 143, 43);
-    width: auto;
-    border-radius: 10px;
 }
 
-.Res{
-    color: red;
+form a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
 }
 
-
-
+form a:hover {
+    text-decoration: underline;
+}
