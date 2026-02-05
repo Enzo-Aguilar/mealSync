@@ -1,14 +1,28 @@
 /*Global styles*/
 :root {
-    --primary: #2F855A;
-    --primary-dark: #276749;
-    --secondary: #285E61;
+    --primary: #0eb65c;
+    --primary-dark: #105f37;
+    --secondary:  #2C7A7B;
     --background: #F7FAFC;
     --card-bg: #FFFFFF;
     --text-main: #2D3748;
     --text-muted: #718096;
-    --border: #E2E8F0;
+    --border: #e2e8f042;
     --danger: #E53E3E;
+}
+
+[data-theme="dark"] {
+    --primary: #0eb65c;
+    --primary-dark: #105f37;
+    --secondary: #ffffff;
+
+    --background: #1A202C;
+    --card-bg: #2D3748;
+
+    --text-main: #EDF2F7;
+    --text-muted: #A0AEC0;
+
+    --border: rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -16,6 +30,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', Arial, sans-serif;
+    transition: background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 

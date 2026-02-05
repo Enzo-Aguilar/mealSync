@@ -1,21 +1,18 @@
-import { validPassword} from "./validator.js";
+  const toggleBtn = document.getElementById("themeToggle");
+  const root = document.documentElement;
 
-document.addEventListener("DOMContentLoaded", function(){
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    root.setAttribute("data-theme", savedTheme);
+    toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  }
 
-    const form = document.querySelector("#form");
-    const res = document.querySelector(".Res");
-    const email = document.querySelector("#email");
-    const password = document.querySelector("#password");
+  toggleBtn.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
 
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
-        if(!validPassword(password)){
-            res.innerHTML = "Invalid Password";
-        }
-        else{
-            alert("Welcome to mealSync!!");
-            window.location.href = "meals.html";
-        }
-    });
-});
+    root.setAttribute("data-theme", isDark ? "light" : "dark");
+    localStorage.setItem("theme", isDark ? "light" : "dark");
 
+    toggleBtn.textContent = isDark ? "🌙" : "☀️";
+  });
