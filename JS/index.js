@@ -10,13 +10,16 @@ submitBtn.addEventListener("click", () => {
     messager.innerHTML = "[ERROR] email muito grande ou muito pequeno"
     email.value = " ";
   }
+  messager.innerHTML = " ";
+  if (!emailSpecialChar(email.value.trim())) {
+    messager.innerHTML = "[ERROR] Caracteres inválidos";
+    email.value = "";
+  }
 
- emailSpecialChar(email.value)
-  ? alert("Im true")
-  : alert("Im false");
-
-
-
+ /*is_EPGE(email)
+ ?alert("Im true")
+ :alert("IM false")
+*/
 });
 
 
